@@ -17,8 +17,8 @@ from django.utils.text import capfirst
 from django.utils.translation import ugettext as _
 
 from .filters import (Filter, CharFilter, BooleanFilter,
-    ChoiceFilter, DateFilter, DateTimeFilter, TimeFilter, ModelChoiceFilter,
-    ModelMultipleChoiceFilter, NumberFilter, UUIDFilter)
+                      ChoiceFilter, DateFilter, DateTimeFilter, TimeFilter, ModelChoiceFilter,
+                      ModelMultipleChoiceFilter, NumberFilter, UUIDFilter)
 
 
 ORDER_BY_FIELD = 'o'
@@ -180,7 +180,7 @@ class FilterSetMetaclass(type):
 
         if None in filters.values():
             raise TypeError("Meta.fields contains a field that isn't defined "
-                "on this FilterSet")
+                            "on this FilterSet")
 
         new_class.declared_filters = declared_filters
         new_class.base_filters = filters
